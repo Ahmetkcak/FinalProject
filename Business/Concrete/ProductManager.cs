@@ -38,7 +38,7 @@ namespace Business.Concrete
         public IResult Delete(Product product)
         {
             _productDal.Delete(product);
-            return new SuccessResult();
+            return new SuccessResult(Messages.ProductDeleted);
         }
 
         public IDataResult<List<Product>> GetAll()
@@ -75,7 +75,7 @@ namespace Business.Concrete
         public IResult Update(Product product)
         {
             _productDal.Udate(product);
-            return new SuccessResult();
+            return new SuccessResult(Messages.ProductUpdated);
         }
     }
 }
