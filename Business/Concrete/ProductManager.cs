@@ -38,13 +38,13 @@ namespace Business.Concrete
         public IResult Delete(Product product)
         {
             _productDal.Delete(product);
-            return new SuccessResult(Messages.ProductDeleted);
+            return new SuccessResult(Messages.ProductDeleted);  
         }
 
         public IDataResult<List<Product>> GetAll()
         {
             //İş kodları
-            if(DateTime.Now.Hour == 13)
+            if(DateTime.Now.Hour == 20)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }

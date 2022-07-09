@@ -8,11 +8,6 @@ using System.Threading.Tasks;
 
 namespace Core.DataAccess
 {
-
-    // Generic constraint
-    // class: referans tip 
-    //IEntity: IEntity olabilir yada IEntity implemente eden bir sınıf olabilir
-    //new: new'lenebilir olmalı.IEntity bir interface olduğundan new'lenemez bu yüzden de interfacei implement eden sınıfları kullan demiş oluruz
     public interface IEntityRepository<T> where T:class,IEntity,new()
     {
 
