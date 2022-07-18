@@ -32,7 +32,7 @@ namespace ConsoleUI
 
         private static void ProductTest()
         {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+            ProductManager productManager = new ProductManager(new EfProductDal(),new CategoryManager(new EfCategoryDal()));
 
             //Product product1 = new Product() {ProductName="Ahmet",CategoryId=2,UnitPrice=27,UnitsInStock=3 };
             //productManager.Add(product1);

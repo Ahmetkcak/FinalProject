@@ -15,7 +15,7 @@ namespace Core.DataAccess.EntityFramework
     {
         public void Add(TEntity entity)
         {
-            //IDispossable pattern implementation of c#
+            
             using (TContext context = new TContext())
             {
                 var addedEntity = context.Entry(entity);
